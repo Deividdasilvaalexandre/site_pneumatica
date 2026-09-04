@@ -1,0 +1,117 @@
+/* Resets e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: mintcream;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Parágrafos e Listas */
+p, li {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Destaque do Fluxo */
+.fluxo {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Divisores */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2rem 0;
+}
+
+/* Estilização da Tabela */
+.tabela-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+th, td {
+    border: 1px solid #333333;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================================
+   RESPONSIVIDADE PADRÃO (Media Queries)
+   =================================================== */
+
+/* Notebooks e Desktops Pequenos (até 1024px) */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.35rem; }
+    p, li { font-size: 1rem; }
+}
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+    body { padding: 1.5rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    p, li { font-size: 0.95rem; }
+}
+
+/* Celulares (até 576px) */
+@media (max-width: 576px) {
+    body { padding: 1rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1.1rem; }
+    p, li { font-size: 0.9rem; }
+    ul { margin-left: 1.2rem; }
+}
