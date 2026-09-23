@@ -115,3 +115,120 @@ th {
     p, li { font-size: 0.9rem; }
     ul { margin-left: 1.2rem; }
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    padding: 20px 10px;
+}
+
+header h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.circuit-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.circuit-card h2 {
+    color: #2563eb;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+/* Container principal com botões e imagens */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Ajuste a altura máxima desejada das imagens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+/* Apenas a imagem com classe .active fica visível */
+.carousel img.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo dos Botões de Navegação */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 58, 138, 0.75);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(30, 58, 138, 1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-weight: bold;
+    color: #4b5563;
+}
