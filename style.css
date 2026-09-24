@@ -232,3 +232,15 @@ footer {
     font-weight: bold;
     color: #4b5563;
 }
+
+/* Texto correspondente à imagem atual */
+.carousel-text {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-left: 4px solid #2563eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
