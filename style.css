@@ -5,17 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: dodgerblue;
-    color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    text-align: left;
-    padding: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 /* Títulos */
 h1 {
     text-align: center;
@@ -127,6 +116,7 @@ body {
     background-color: #f3f4f6;
     color: #1f2937;
     padding: 20px 10px;
+    text-align: center;
 }
 
 header h1 {
@@ -243,4 +233,37 @@ footer {
     font-size: 1rem;
     line-height: 1.6;
     text-align: left;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+
+    .menu-btn {
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav.menu-aberto {
+        display: flex;
+    }
 }

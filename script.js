@@ -172,3 +172,74 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // MENU HAMBÚRGUER
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    if (menuBtn && menu) {
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("menu-aberto");
+        });
+    }
+
+
+    // CARROSSÉIS
+    const carouselContainers =
+        document.querySelectorAll(".carousel-container");
+
+    carouselContainers.forEach((container) => {
+
+        const images =
+            container.querySelectorAll(".carousel img");
+
+        const prevBtn =
+            container.querySelector(".prev-btn");
+
+        const nextBtn =
+            container.querySelector(".next-btn");
+
+        const textElement =
+            container.parentElement.querySelector(".carousel-text");
+
+        let currentIndex = 0;
+
+        function updateCarousel(newIndex) {
+
+            images[currentIndex].classList.remove("active");
+
+            currentIndex = newIndex;
+
+            images[currentIndex].classList.add("active");
+
+            if (textElement) {
+                textElement.textContent =
+                    images[currentIndex].dataset.text;
+            }
+        }
+
+        nextBtn.addEventListener("click", () => {
+
+            const nextIndex =
+                (currentIndex + 1) % images.length;
+
+            updateCarousel(nextIndex);
+        });
+
+        prevBtn.addEventListener("click", () => {
+
+            const prevIndex =
+                (currentIndex - 1 + images.length) % images.length;
+
+            updateCarousel(prevIndex);
+        });
+
+        if (textElement) {
+            textElement.textContent =
+                images[currentIndex].dataset.text;
+        }
+    });
+
+});
